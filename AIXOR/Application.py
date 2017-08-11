@@ -52,7 +52,9 @@ class Application(Gtk.Application):
         return 0
 
     def on_about(self, action, param):
-        about_dialog = Gtk.AboutDialog(transient_for=self.window, modal=True)
+        builder = Gtk.Builder.new_from_file("AIXOR/UIXOR/ApplicationInterface.ui")
+        about_dialog = builder.get_object("AboutWindow")
+        about_dialog.set_transient_for(self.window)
         about_dialog.present()
 
     def on_quit(self, action, param):

@@ -84,6 +84,18 @@ def softmax(X):
 
     return X
 
+def bent_identity(X):
+    """Compute the K-way softmax function inplace.
+        Parameters
+        ----------
+        X : {array-like, sparse matrix}, shape (n_samples, n_features)
+            The input data.
+        Returns
+        -------
+        X_new : {array-like, sparse matrix}, shape (n_samples, n_features)
+            The transformed data.
+        """
+    np.sqrt(X)
 
 ACTIVATIONS = {'identity': identity, 'tanh': tanh, 'logistic': logistic,
                'relu': relu, 'softmax': softmax}
