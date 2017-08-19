@@ -63,7 +63,7 @@ class ApplicationWindow(Gtk.ApplicationWindow):
                                                GLib.Variant.new_boolean(obj.props.is_maximized)))
 
         self.notebookContent = MLPNotebookContent()
-        self.swMainAnalysis.add(self.notebookContent.content)
+        self.swMainAnalysis.add_with_viewport(self.notebookContent.content)
         # lbl_variant = GLib.Variant.new_string("String 1")
         # lbl_action = Gio.SimpleAction.new_stateful("change_label", lbl_variant.get_type(),
         #                                        lbl_variant)
