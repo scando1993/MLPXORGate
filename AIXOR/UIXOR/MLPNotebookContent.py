@@ -8,6 +8,8 @@ from gi.repository import Gtk
 from Constants import MAIN_CONTENT_FILE
 from ..MLXOR.XOR import XOR
 from AIXOR.Utils.FileHandler import FileHandler
+import threading
+from io import StringIO
 
 import matplotlib.cm as cm
 from matplotlib.backends.backend_cairo import FigureCanvas
@@ -44,6 +46,7 @@ class MLPNotebookContent:
         self.revealerNoResults = builder.get_object("revealerNoResults")
         self.revealerResults = builder.get_object("revealerResults")
         self.txtViewPredictResults = builder.get_object("txtViewPredictResults")
+        self.txtViewPredictProcess = builder.get_object("txtViewPredictProcess")
         self.frameGraphics = builder.get_object("frameGraphics")
         self.frameResults = builder.get_object("frameResults")
         self.lblNoResults = builder.get_object("lblNoResults")
@@ -83,7 +86,7 @@ class MLPNotebookContent:
         self.cbOutputTrain.set_model(self.modelCbFileChooser)
 
         self.cbLearningRate.set_active(0)
-        self.cbSolverFunction.set_active(0)
+        self.cbSolverFunction.set_active(1)
         self.cbActivationFunction.set_active(0)
         self.cbInputTrain.set_active(0)
         self.cbOutputTrain.set_active(0)
@@ -125,18 +128,33 @@ class MLPNotebookContent:
         self.spnTrainSize.set_value(1.00 - self.spnTestSize.get_value())
 
     def on_frameResults_draw(self, cr, data):
-        if len(self.xor.predictions) > 0:
-            buffer = self.txtViewPredictResults.get_buffer()
-            iter_ = buffer.get_end_iter()
-            buffer.insert(iter_,self.print_results())
-            # self.txtViewPredictResults.set_text(str(self.xor.predictions))
-            self.revealerNoResults.set_reveal_child(False)
-            self.revealerResults.set_reveal_child(True)
+        # if len(self.xor.predictions) > 0:
+        #     self.txtViewPredictResults.set_buffer(Gtk.TextBuffer())
+        #     buffer = self.txtViewPredictResults.get_buffer()
+        #     iter_ = buffer.get_end_iter()
+        #     buffer.insert(iter_,self.print_results())
+        #
+        #     self.txtViewPredictProcess.set_buffer(Gtk.TextBuffer())
+        #     buffer = self.txtViewPredictProcess.get_buffer()
+        #     iter_ = buffer.get_end_iter()
+        #     buffer.insert(iter_, self.print_results_verbose())
+        #     # self.txtViewPredictResults.set_text(str(self.xor.predictions))
+        #     self.revealerNoResults.set_reveal_child(False)
+        #     self.revealerResults.set_reveal_child(True)
+        pass
 
     def print_results(self):
-        string = '''Accuracy: %s\n''' % (self.xor.score)
-        for i, p in enumerate(self.xor.predictions):
-            string += "Output: %s Predicted: %s\n" % (self.xor.real_output, self.xor.predictions)
+        string = "Accuracy: %s\n" % (self.xor.score)
+        for i, p in enumerate(self.xor.predictions[:100]):
+            string += "Output: %s Predicted: %s\n" % (self.xor.real_output[i], self.xor.predictions[i])
+        return string
+
+    def print_results_verbose(self):
+        string = ""
+        for text in self.xor.verbose:
+        # for text in text.getvalue().splitlines():
+            string += text
+            string += "\n"
         return string
 
     def calculate(self):
@@ -151,22 +169,39 @@ class MLPNotebookContent:
         self.xor.train_size = float(self.spnTrainSize.get_value())
         self.xor.test_size = float(self.spnTestSize.get_value())
 
-        print (self.xor.train_size)
-        print (self.xor.test_size)
-        print (self.xor.solver_functions)
-
         self.xor.neurons_layer = int(self.spnNeuronsLayers.get_value())
         self.xor.hidden_layers = int(self.spnHiddenLayers.get_value())
         self.xor.input_set = self.inputDataSet
         self.xor.output_set = self.outputDataSet
 
-        if not self.xor.isAlive():
-            self.xor.start()
+        # if not self.xor.isAlive():
+        #     self.xor.start()
 
-        while self.xor.is_running():
-            self.busy = True
-            # import time
-            # time.sleep(1)
+        # while self.xor.is_running():
+        #     self.busy = True
+        #     # import time
+        #     # time.sleep(1)
+
+        # string = StringIO()
+        #
+        # sys.stdout = string
+
+        self.xor.run()
+
+        # self.txtViewPredictResults.set_buffer(Gtk.TextBuffer())
+        buffer = self.txtViewPredictResults.get_buffer()
+        iter_ = buffer.get_end_iter()
+        buffer.insert(iter_, self.print_results())
+
+        # self.txtViewPredictProcess.set_buffer(Gtk.TextBuffer())
+        buffer = self.txtViewPredictProcess.get_buffer()
+        iter_ = buffer.get_end_iter()
+        buffer.insert(iter_, self.print_results_verbose())
+        # self.txtViewPredictResults.set_text(str(self.xor.predictions))
+        self.revealerNoResults.set_reveal_child(False)
+        self.revealerResults.set_reveal_child(True)
+        # threading.Thread(target=self.xor.run).start()
+
         self.frameResults.queue_draw()
 
     def stop(self):
@@ -184,5 +219,6 @@ class MLPNotebookContent:
         params_map['maxTolerance'] = self.spnMaxTol.get_value()
         params_map['testSize'] = self.spnTestSize.get_value()
         params_map['trainSize'] = self.spnTrainSize.get_value()
-        params_map['predResults'] = self.txtViewPredictResults.get_text()
+        buffer = self.txtViewPredictResults.get_buffer()
+        params_map['predResults'] = buffer.get_text(buffer.get_start_iter(),buffer.get_end_iter(), False)
         return params_map

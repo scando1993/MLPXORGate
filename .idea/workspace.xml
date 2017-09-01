@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0aab2766-cf46-4c23-8bb3-630943e111f5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AIXOR/Utils/FileHandler.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AIXOR/Utils/Utils.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AIXOR/Utils/gi_composites.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/#UI.ui#" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/UI.glade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/Application.py" afterPath="$PROJECT_DIR$/AIXOR/Application.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/MLXOR/XOR.py" afterPath="$PROJECT_DIR$/AIXOR/MLXOR/XOR.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py" afterPath="$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py" afterPath="$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/ApplicationInterface.ui" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/ApplicationInterface.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/ApplicationWindow.py" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/ApplicationWindow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/Constants.py" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/Constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebook.py" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebook.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/MainContent.glade" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/MainContent.glade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/MainContent.ui" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/MainContent.ui" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/UIXOR/NotebookTabLabel.py" afterPath="$PROJECT_DIR$/AIXOR/UIXOR/NotebookTabLabel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AIXOR/Utils/__init__.py" afterPath="$PROJECT_DIR$/AIXOR/Utils/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/XORClass.py" afterPath="$PROJECT_DIR$/XORClass.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AIProyect$XORClass.coverage" NAME="XORClass Coverage Results" MODIFIED="1504273617734" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AIProyect$XORClass.coverage" NAME="XORClass Coverage Results" MODIFIED="1504281825677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -41,27 +29,9 @@
       <file leaf-file-name="MLPNotebook.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
+            <state relative-caret-position="78">
               <caret line="98" column="35" lean-forward="false" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MLPNotebookContent.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#2373#3351#0" expanded="false" />
-                <element signature="e#3408#3627#0" expanded="false" />
-                <element signature="e#3685#3904#0" expanded="false" />
-                <element signature="e#3959#4092#0" expanded="false" />
-                <element signature="e#4148#4281#0" expanded="false" />
-                <element signature="e#6452#7248#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -69,18 +39,8 @@
       <file leaf-file-name="base_functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1897">
+            <state relative-caret-position="15">
               <caret line="173" column="14" lean-forward="false" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationWindow.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/ApplicationWindow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="154" column="34" lean-forward="false" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -89,8 +49,8 @@
       <file leaf-file-name="XOR.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+            <state relative-caret-position="122">
+              <caret line="88" column="47" lean-forward="true" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
               <folding>
                 <element signature="e#0#52#0" expanded="true" />
               </folding>
@@ -98,43 +58,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AIXOR/Utils/Utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="multilayer_perceptron.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12060">
-              <caret line="823" column="0" lean-forward="false" selection-start-line="823" selection-start-column="0" selection-end-line="823" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AIXOR/Application.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="XORClass.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XORClass.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="97">
+              <caret line="512" column="0" lean-forward="false" selection-start-line="512" selection-start-column="0" selection-end-line="512" selection-end-column="0" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#41112#50544#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MLPNotebookContent.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="222" column="104" lean-forward="false" selection-start-line="222" selection-start-column="104" selection-end-line="222" selection-end-column="104" />
+              <folding>
+                <element signature="e#3530#3749#0" expanded="false" />
+                <element signature="e#3807#4026#0" expanded="false" />
+                <element signature="e#4081#4214#0" expanded="false" />
+                <element signature="e#4270#4403#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,6 +93,11 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>verbose</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,13 +117,11 @@
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/__init__.py" />
         <option value="$PROJECT_DIR$/AIXOR/MLXOR/__init__.py" />
         <option value="$PROJECT_DIR$/AIXOR/ApplicationMenu.xml" />
-        <option value="$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py" />
         <option value="$PROJECT_DIR$/AIXOR/ApplicationMenu.ui" />
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/UI_FILE.py" />
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookTab.py" />
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/Constants.py" />
         <option value="$PROJECT_DIR$/AIXOR/Utils/gi_composites.py" />
-        <option value="$PROJECT_DIR$/AIXOR/Application.py" />
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/NotebookTabLabel.py" />
         <option value="$PROJECT_DIR$/AIXOR/Utils/__init__.py" />
         <option value="$PROJECT_DIR$/AIXOR/Utils/Utils.py" />
@@ -184,6 +132,8 @@
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/ApplicationWindow.py" />
         <option value="$PROJECT_DIR$/XORClass.py" />
         <option value="$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py" />
+        <option value="$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py" />
+        <option value="$PROJECT_DIR$/AIXOR/Application.py" />
         <option value="$PROJECT_DIR$/AIXOR/MLXOR/XOR.py" />
         <option value="$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py" />
       </list>
@@ -216,6 +166,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -280,8 +232,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -565,7 +515,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4924357" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3561644" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40239727" sideWeight="0.49394855" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3270548" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -612,42 +562,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>89</line>
+          <line>91</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>87</line>
+          <line>89</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>84</line>
+          <line>85</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>85</line>
+          <line>86</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>81</line>
+          <line>82</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>75</line>
+          <line>76</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>93</line>
+          <line>95</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py</url>
-          <line>92</line>
+          <line>94</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
@@ -658,52 +608,20 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="26" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AIXOR/ApplicationMenu.ui">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="97" column="13" lean-forward="false" selection-start-line="97" selection-start-column="13" selection-end-line="97" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/NotebookTabLabel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2373#3351#0" expanded="false" />
-            <element signature="e#3408#3627#0" expanded="false" />
-            <element signature="e#3685#3904#0" expanded="false" />
-            <element signature="e#3959#4092#0" expanded="false" />
-            <element signature="e#4148#4281#0" expanded="false" />
-            <element signature="e#6452#7248#0" expanded="false" />
+            <element signature="e#3530#3749#0" expanded="false" />
+            <element signature="e#3807#4026#0" expanded="false" />
+            <element signature="e#4081#4214#0" expanded="false" />
+            <element signature="e#4270#4403#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -984,35 +902,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py">
+    <entry file="file:///usr/lib64/python2.7/site-packages/sklearn/neural_network/_stochastic_optimizers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12060">
-          <caret line="823" column="0" lean-forward="false" selection-start-line="823" selection-start-column="0" selection-end-line="823" selection-end-column="0" />
+        <state relative-caret-position="115">
+          <caret line="69" column="36" lean-forward="true" selection-start-line="69" selection-start-column="18" selection-end-line="69" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AIXOR/Application.py">
+    <entry file="file:///usr/lib64/python2.7/site-packages/scipy/optimize/optimize.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="-4736">
+          <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XORClass.py">
+    <entry file="file:///usr/lib64/python2.7/site-packages/scipy/optimize/lbfgsb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="280">
+          <caret line="364" column="21" lean-forward="true" selection-start-line="364" selection-start-column="21" selection-end-line="364" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/base_functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1897">
+        <state relative-caret-position="15">
           <caret line="173" column="14" lean-forward="false" selection-start-line="173" selection-start-column="14" selection-end-line="173" selection-end-column="14" />
           <folding />
         </state>
@@ -1020,16 +936,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebook.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
+        <state relative-caret-position="78">
           <caret line="98" column="35" lean-forward="false" selection-start-line="98" selection-start-column="35" selection-end-line="98" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib64/python2.7/warnings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIXOR/Application.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XORClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/multilayer_perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="512" column="0" lean-forward="false" selection-start-line="512" selection-start-column="0" selection-end-line="512" selection-end-column="0" />
+          <folding>
+            <element signature="e#41112#50544#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AIXOR/MLXOR/XOR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
+        <state relative-caret-position="122">
+          <caret line="88" column="47" lean-forward="true" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
           <folding>
             <element signature="e#0#52#0" expanded="true" />
           </folding>
@@ -1038,16 +990,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AIXOR/UIXOR/MLPNotebookContent.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+        <state relative-caret-position="187">
+          <caret line="222" column="104" lean-forward="false" selection-start-line="222" selection-start-column="104" selection-end-line="222" selection-end-column="104" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#2373#3351#0" expanded="false" />
-            <element signature="e#3408#3627#0" expanded="false" />
-            <element signature="e#3685#3904#0" expanded="false" />
-            <element signature="e#3959#4092#0" expanded="false" />
-            <element signature="e#4148#4281#0" expanded="false" />
-            <element signature="e#6452#7248#0" expanded="false" />
+            <element signature="e#3530#3749#0" expanded="false" />
+            <element signature="e#3807#4026#0" expanded="false" />
+            <element signature="e#4081#4214#0" expanded="false" />
+            <element signature="e#4270#4403#0" expanded="false" />
           </folding>
         </state>
       </provider>

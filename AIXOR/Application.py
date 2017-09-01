@@ -2,7 +2,9 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import GLib, Gio, Gtk
 import UIXOR.ApplicationWindow
+import warnings
 
+warnings.filterwarnings("ignore")
 # This would typically be its own file
 MENU_XML="AIXOR/ApplicationMenu.ui"
 

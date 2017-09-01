@@ -4,15 +4,15 @@ from sklearn import __version__
 import threading
 import numpy as np
 
-class XOR(threading.Thread):
+class XOR:
     activation_functions = ('identity','logistic','tanh','relu')
     solver_functions = ("lbfgs", "sgd", "adam")
     learning_rate = ("constant", "invscaling", "adaptative")
 
     def __init__(self, name=""):
-        self._stop_event = threading.Event()
-        self._sleep_period = 1.0
-        threading.Thread.__init__(self,name=name)
+        # self._stop_event = threading.Event()
+        # self._sleep_period = 1.0
+        # threading.Thread.__init__(self,name=name)
 
         self._mlp_random_state = 0
         self._mlp_batch_size = 0
@@ -29,7 +29,7 @@ class XOR(threading.Thread):
         self._mlp_beta_2 = 0.999
         self._mlp_epsilon = 1e-8
         self._mlp_power_t = 0.5
-        self._mlp_verbose = False
+        self._mlp_verbose = True
         self._mlp_warm_start = False
 
         self._mlp = MLPClassifier()
@@ -46,6 +46,7 @@ class XOR(threading.Thread):
 
         self.predictions = []
         self.real_output = []
+        self.verbose = []
         self.score = 0.0
 
     @staticmethod
@@ -84,7 +85,8 @@ class XOR(threading.Thread):
         self._mlp.solver = self.solver
         self._mlp.learning_rate = self.learning_rate
         self._mlp.tol = self.mlp_tolerance
-
+        self._mlp.verbose = self._mlp_verbose
+        self._mlp.string_verbose = self.verbose
         self._mlp.hidden_layer_sizes = tuple([self.neurons_layer]*self.hidden_layers)
 
         self._mlp.fit(x_train,y_train)
@@ -94,8 +96,9 @@ class XOR(threading.Thread):
         self.score = self._mlp.score(x_test, y_test)
 
     def join(self, timeout=None, balancing=True):
-        self._stop_event.set()
-        threading.Thread.join(self, timeout)
-
+        # self._stop_event.set()
+        # threading.Thread.join(self, timeout)
+        pass
     def is_running(self):
-        return self._stop_event.isSet()
+        # return self._stop_event.isSet()
+        pass
