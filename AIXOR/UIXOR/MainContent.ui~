@@ -48,6 +48,7 @@
       <pattern>*.xls</pattern>
     </patterns>
   </object>
+  <object class="GtkTextBuffer" id="textbuffer1"/>
   <object class="GtkBox" id="MLPNotebookContent">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -612,7 +613,10 @@
                                     <property name="can_focus">True</property>
                                     <property name="shadow_type">in</property>
                                     <child>
-                                      <placeholder/>
+                                      <object class="GtkTextView" id="txtViewPredictProcess">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                      </object>
                                     </child>
                                   </object>
                                 </child>
@@ -624,7 +628,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="margin_top">5</property>
                                 <property name="margin_bottom">5</property>
-                                <property name="label" translatable="yes">Graphics</property>
+                                <property name="label" translatable="yes">Process Results</property>
                                 <attributes>
                                   <attribute name="foreground" value="#000000000000"/>
                                 </attributes>
@@ -669,5 +673,4 @@
       </packing>
     </child>
   </object>
-  <object class="GtkTextBuffer" id="textbuffer1"/>
 </interface>

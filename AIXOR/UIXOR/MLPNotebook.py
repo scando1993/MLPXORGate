@@ -102,6 +102,7 @@ class MLPNotebook:
         index = self.content.get_current_page()
         return self.mlp_content_array[index]
 
+
 def get_label_from_tab(notebook_tab):
     childrens = notebook_tab.get_children()
 

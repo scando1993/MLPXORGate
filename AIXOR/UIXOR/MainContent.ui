@@ -628,7 +628,7 @@
                                 <property name="can_focus">False</property>
                                 <property name="margin_top">5</property>
                                 <property name="margin_bottom">5</property>
-                                <property name="label" translatable="yes">Process Results</property>
+                                <property name="label" translatable="yes">Graphics</property>
                                 <attributes>
                                   <attribute name="foreground" value="#000000000000"/>
                                 </attributes>
