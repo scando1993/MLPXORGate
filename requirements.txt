@@ -1,4 +1,4 @@
-matplotlib==1.5.2rc2
+matplotlib==1.5.2
 numpy==1.13.1
 scipy==0.19.1
 pygobject==3.20.1
