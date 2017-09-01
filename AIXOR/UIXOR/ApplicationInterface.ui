@@ -33,142 +33,6 @@ Author: Kevin Cando
   <requires lib="gtk+" version="3.20"/>
   <!-- interface-license-type bsd3c -->
   <!-- interface-authors Kevin Cando -->
-  <object class="GtkAboutDialog" id="AboutWindow">
-    <property name="can_focus">False</property>
-    <property name="title" translatable="yes">About</property>
-    <property name="modal">True</property>
-    <property name="type_hint">dialog</property>
-    <property name="program_name">MLPClassifier</property>
-    <property name="version">1.0.0</property>
-    <property name="comments" translatable="yes">This is a MLPClassifier implementation for a XOR gate</property>
-    <property name="authors">Kevin Cando
-Johnny Suarez</property>
-    <property name="logo_icon_name">help-about</property>
-    <property name="license_type">lgpl-3-0-only</property>
-    <child internal-child="vbox">
-      <object class="GtkBox">
-        <property name="can_focus">False</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">2</property>
-        <child internal-child="action_area">
-          <object class="GtkButtonBox">
-            <property name="can_focus">False</property>
-            <property name="layout_style">end</property>
-            <child>
-              <object class="GtkButton" id="btnAboutClose">
-                <property name="label">gtk-close</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="receives_default">True</property>
-                <property name="use_stock">True</property>
-                <property name="image_position">right</property>
-                <property name="always_show_image">True</property>
-                <signal name="clicked" handler="gtk_widget_destroy" object="AboutWindow" swapped="no"/>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">False</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <placeholder/>
-        </child>
-      </object>
-    </child>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
-  </object>
-  <object class="GtkNotebook" id="MLPNotebook">
-    <property name="visible">True</property>
-    <property name="can_focus">True</property>
-    <child>
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">label</property>
-      </object>
-    </child>
-    <child type="tab">
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">page 1</property>
-      </object>
-      <packing>
-        <property name="tab_expand">True</property>
-        <property name="tab_fill">False</property>
-        <property name="reorderable">True</property>
-      </packing>
-    </child>
-    <child>
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">label</property>
-      </object>
-      <packing>
-        <property name="position">1</property>
-      </packing>
-    </child>
-    <child type="tab">
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">page 2</property>
-      </object>
-      <packing>
-        <property name="position">1</property>
-        <property name="tab_expand">True</property>
-        <property name="tab_fill">False</property>
-        <property name="reorderable">True</property>
-      </packing>
-    </child>
-    <child>
-      <placeholder/>
-    </child>
-    <child type="tab">
-      <object class="GtkLabel">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="label" translatable="yes">page 3</property>
-      </object>
-      <packing>
-        <property name="position">2</property>
-        <property name="tab_expand">True</property>
-        <property name="tab_fill">False</property>
-        <property name="reorderable">True</property>
-        <property name="detachable">True</property>
-      </packing>
-    </child>
-    <child type="action-end">
-      <object class="GtkButton" id="btnAddTab">
-        <property name="visible">True</property>
-        <property name="can_focus">True</property>
-        <property name="receives_default">True</property>
-        <property name="relief">none</property>
-        <signal name="clicked" handler="on_btn_add_tab_clicked" swapped="no"/>
-        <child>
-          <object class="GtkImage">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="stock">gtk-add</property>
-          </object>
-        </child>
-      </object>
-      <packing>
-        <property name="tab_fill">False</property>
-      </packing>
-    </child>
-  </object>
   <object class="GtkBox" id="MainWindowContent">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -185,13 +49,15 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolNew">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Open Current MLP Analysis Parameters</property>
             <property name="label" translatable="yes">New Analysis</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-new</property>
             <signal name="clicked" handler="on_btnToolNew_clicked" swapped="no"/>
+            <accelerator key="n" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="homogeneous">True</property>
           </packing>
         </child>
@@ -199,13 +65,31 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolOpen">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Open Current MLP Analysis Parameters</property>
             <property name="label" translatable="yes">Open Analysis</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-open</property>
             <signal name="clicked" handler="on_btnToolOpen_clicked" swapped="no"/>
+            <accelerator key="o" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
+            <property name="homogeneous">True</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkToolButton" id="btnToolSave">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Save Current MLP Analysis Parameters</property>
+            <property name="label" translatable="yes">Save Analysis</property>
+            <property name="use_underline">True</property>
+            <property name="stock_id">gtk-save</property>
+            <signal name="clicked" handler="on_btnToolSave_clicked" swapped="no"/>
+            <accelerator key="s" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
+          </object>
+          <packing>
+            <property name="expand">True</property>
             <property name="homogeneous">True</property>
           </packing>
         </child>
@@ -220,13 +104,15 @@ Johnny Suarez</property>
           </packing>
         </child>
         <child>
-          <object class="GtkToolButton" id="btnToolStatistics ">
+          <object class="GtkToggleToolButton" id="btnToolStatistics ">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Shows Statistics for the entire use of the program</property>
             <property name="label" translatable="yes">Statistics</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-info</property>
             <signal name="clicked" handler="on_btnToolStatistics_clicked" swapped="no"/>
+            <accelerator key="s" signal="clicked" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -247,10 +133,12 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolCalculate">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Makes the calculation of the MLP Classifier</property>
             <property name="label" translatable="yes">Calculate</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-execute</property>
             <signal name="clicked" handler="on_btnToolCalculate_clicked" swapped="no"/>
+            <accelerator key="c" signal="clicked" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -261,10 +149,12 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolCancel">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Cancels the current MLP Calculation</property>
             <property name="label" translatable="yes">Cancel</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-cancel</property>
             <signal name="clicked" handler="on_btnToolCancel_clicked" swapped="no"/>
+            <accelerator key="x" signal="clicked" modifiers="GDK_SHIFT_MASK | GDK_CONTROL_MASK"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -285,10 +175,12 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolPreferences">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Shows the current preferences</property>
             <property name="label" translatable="yes">Preferences</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-preferences</property>
             <signal name="clicked" handler="on_btnToolPreferences_clicked" swapped="no"/>
+            <accelerator key="p" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -299,10 +191,12 @@ Johnny Suarez</property>
           <object class="GtkToolButton" id="btnToolHelp">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip_text" translatable="yes">Displays the help documentation</property>
             <property name="label" translatable="yes">Help</property>
             <property name="use_underline">True</property>
             <property name="stock_id">gtk-help</property>
             <signal name="clicked" handler="on_btnToolHelp_clicked" swapped="no"/>
+            <accelerator key="h" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -366,20 +260,10 @@ Johnny Suarez</property>
             <property name="can_focus">True</property>
             <property name="wide_handle">True</property>
             <child>
-              <object class="GtkScrolledWindow" id="swMainAnalysis">
+              <object class="GtkLabel">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
-                <property name="hexpand">True</property>
-                <property name="shadow_type">in</property>
-                <child>
-                  <object class="GtkViewport">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <placeholder/>
-                    </child>
-                  </object>
-                </child>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">label</property>
               </object>
               <packing>
                 <property name="resize">True</property>
@@ -608,8 +492,8 @@ Johnny Suarez</property>
         <property name="margin_end">10</property>
         <property name="margin_top">6</property>
         <property name="margin_bottom">6</property>
-        <property name="orientation">vertical</property>
         <property name="spacing">2</property>
+        <signal name="draw" handler="on_mainWindowStatusBar_draw" swapped="no"/>
       </object>
       <packing>
         <property name="expand">False</property>

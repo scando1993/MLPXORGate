@@ -1,0 +1,1 @@
+{"predResults": "label", "testSize": 0.0, "hiddenLayers": 0.0, "trainSize": 0.0, "learningRate": "constant", "outputData": [], "maxTolerance": 0.0, "activationFunction": "identity", "numNeuronsLayer": 0.0, "inputData": [], "solverFunction": "lbfgs"}

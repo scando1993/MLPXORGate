@@ -97,8 +97,45 @@ def bent_identity(X):
         """
     np.sqrt(X)
 
-ACTIVATIONS = {'identity': identity, 'tanh': tanh, 'logistic': logistic,
-               'relu': relu, 'softmax': softmax}
+
+def hard_lim(x):
+    return ( x > 0 ) * 1.0
+
+
+def hard_lims(x):
+    return ( x > 0 ) * 2.0 - 1.0
+
+
+def competitive(dist):
+    r = np.zeros_like(dist)
+    min_ = np.argmin(dist)
+    r[min_] = 1.0
+    return r
+
+
+def sat_lins(x):
+    x[x < -1] = -1
+    x[x > 1] = 1
+    return x
+
+
+def sat_lin(x):
+    x[x < 0] = 0
+    x[x > 1] = 1
+    return x
+
+
+def sat_lin_pr(x):
+    x[x < 0] = 0
+    x[x > 1] = 1
+    x[(x >= 0) & (x <= 1)] *= 1
+    return x
+
+ACTIVATIONS = {'identity': identity,
+               'tanh': tanh,
+               'logistic': logistic,
+               'relu': relu,
+               'softmax': softmax}
 
 
 def inplace_identity_derivative(Z, delta):

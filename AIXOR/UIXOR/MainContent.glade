@@ -30,6 +30,141 @@
   <object class="GtkListStore" id="datModCbSolverFunction"/>
   <object class="GtkListStore" id="datModelCbLearningRate"/>
   <object class="GtkListStore" id="dataModCbActFunctions"/>
+  <object class="GtkFileChooserDialog" id="filechooserDialog2">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="preview_widget_active">False</property>
+    <property name="use_preview_label">False</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <items>
+              <item translatable="yes">*.txt</item>
+              <item translatable="yes">*.mat</item>
+            </items>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkFileChooserDialog" id="filechooserdialog1">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="preview_widget_active">False</property>
+    <property name="use_preview_label">False</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <items>
+              <item translatable="yes">*.txt</item>
+              <item translatable="yes">*.mat</item>
+            </items>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkFileChooserDialog" id="filechooserdialog2">
+    <property name="can_focus">False</property>
+    <property name="type_hint">dialog</property>
+    <property name="preview_widget_active">False</property>
+    <property name="use_preview_label">False</property>
+    <child internal-child="vbox">
+      <object class="GtkBox">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkComboBoxText">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <items>
+              <item translatable="yes">*.txt</item>
+              <item translatable="yes">*.mat</item>
+            </items>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
   <object class="GtkFileFilter" id="filefilter">
     <patterns>
       <pattern>*.mat</pattern>
@@ -71,6 +206,10 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="do_overwrite_confirmation">True</property>
+            <property name="filter">filefilter</property>
+            <property name="preview_widget_active">False</property>
+            <property name="use_preview_label">False</property>
+            <property name="dialog">filechooserdialog2</property>
             <property name="title" translatable="yes">Input Dataset</property>
             <signal name="file-set" handler="on_btnInputTrain_file_set" swapped="no"/>
           </object>
@@ -100,6 +239,7 @@
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="do_overwrite_confirmation">True</property>
+            <property name="dialog">filechooserdialog1</property>
             <property name="title" translatable="yes">Output Dataset</property>
             <signal name="file-set" handler="on_btnOutputTrain_file_set" swapped="no"/>
           </object>
