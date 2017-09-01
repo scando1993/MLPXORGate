@@ -11,9 +11,6 @@ from AIXOR.Utils.FileHandler import FileHandler
 import threading
 from io import StringIO
 
-import matplotlib.cm as cm
-from matplotlib.backends.backend_cairo import FigureCanvas
-
 accepted_files = ("*.txt","*.xslx","*.mat")
 
 
